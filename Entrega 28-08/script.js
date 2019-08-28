@@ -62,3 +62,27 @@ function Script4(){
     alert("A menor idade entre os habitantes é de: " + acmSAge);
     alert("A quantidade de mulheres com mais de dois filhos com renda inferior a R$600.00 é de "+ acmWomen);
 }
+function Script5(){
+    var vet= []
+    for(var i=0; i<5; i++){
+        var objeto= {}
+        objeto.codigo= Number(prompt("Informe o codigo do produto"));
+        objeto.descricao= prompt("Descrição");
+        objeto.qtde= Number(prompt("Informe a quantidade de sejada"));
+        objeto.preco= Number(prompt("Informe o preço do produto"))
+    
+    for(var j=0; j<vet.length; j++){
+        if(objeto.codigo<vet[j].codigo){
+            vet.splice(j,0,objeto)
+            break
+        }
+    }
+    if (j==vet.length){
+        vet.push(objeto);
+        alert("Adicionado com sucesso")
+    }
+}
+for(var i=0; i<vet.length; i++){
+    alert(vet[i].codigo + ""+vet[i].descricao+""+vet[i].preco+""+vet[i].qtde);
+}
+}
